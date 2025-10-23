@@ -5,8 +5,8 @@ from datetime import datetime
 
 # === CONFIG ===
 TICKERS = ["GOLDBEES.NS", "NIFTYBEES.NS", "ITBEES.NS", "GOLDPETAL.NS"]
-EMAIL_FROM = "jeevanantham19893@gmail.com"           # your Gmail
-EMAIL_TO = "jeevanantham19893@gmail.com"             # recipient email (can be same)
+EMAIL_FROM = "jeevanantham1989@gmail.com"           # your Gmail
+EMAIL_TO = "jeevanantham1989@gmail.com"             # recipient email (can be same)
 APP_PASSWORD = "gkbnqakvxrqyygiw"   # Gmail App Password
 
 # === FUNCTION: get swing signal ===
