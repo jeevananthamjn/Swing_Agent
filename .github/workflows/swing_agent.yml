@@ -24,9 +24,9 @@ jobs:
           pip install yfinance gspread oauth2client
 
       - name: Run Swing Agent
-        env:
-          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
-          EMAIL_TO: ${{ secrets.EMAIL_TO }}
-          APP_PASSWORD: ${{ secrets.APP_PASSWORD }}
-          GSHEET_JSON: ${{ secrets.GSHEET_JSON }}
-        run: python swing_agent.py
+  env:
+    EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+    EMAIL_TO: ${{ secrets.EMAIL_TO }}
+    APP_PASSWORD: ${{ secrets.APP_PASSWORD }}
+    GSHEET_JSON: ${{ secrets.GSHEET_JSON }}
+  run: python swing_agent.py
