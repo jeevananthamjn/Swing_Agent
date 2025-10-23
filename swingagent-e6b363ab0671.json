@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "swingagent",
+  "private_key_id": "e6b363ab06718ac10a9f95aab7e8faff1cf6fbfc",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCfaZRlIEwTt8qm\njSm+ntPRJY3iXMHoQEjlRtaDuCbEECauNN37J2n+hkWs11TIItmgfc9DbM/uM3Y6\nIIOUaVey25Cqq+XTVJ87tvT20NoPss1r+UC4ffR6qvKqlOfPrXAroVesrWf0PXJm\np5oCZP8GTk3DU9BITvfed3ifgsV9hFS/XUI3Ohcanzk3LkDsp1lyXHSVyc60+B8r\nneOCA7UGRSAFTXbjSNyXF35NTLtiIiNBpIBT9Hwaf4JnbmoMCEm70CGosY+TBlqq\naXkytdAg/929STP9kAHdGfEiieXDM7Sv+TxhHQKlQlyTTfWQvw+f/LruOI+kcXwx\nyirlHvC7AgMBAAECggEAI0YD8Yp/ev94pnjm60iOuyExr4xx1bffyWfu0I+feFPQ\nk0ycb9YNVKYWZcPx/SUE/cfI5HT/34fgmcUXCHB02N1Pugw2WxhG8bouoyyci8u3\nO7SYFxq7zabk8kznrGMGxoi5czqdnYQ5O7DLWctKSPVrrJRvqohavY23EaiolXio\noUpulEDTXWTucfq/CWBHVPYOHQ7Cw2WrSp7C8WArJdjuPaO6Knc+DERufi2gkkwD\nts6UMtTvxx62/sTkIq2mILbwkhLEjV5fmw47ZdD+nFIiaqZA30p4tcQFsHtQy4hw\n6DfpO8V5W9+FdO2dbRaUxpGI+ScldtoDmGroivO41QKBgQDTDupqGBJ0diNhVR+u\nntmsEGP32FSkswZey2krPsICGfRT7RIYnTywky5bu569KNDAUM8uVtzgs4ThjTXO\nosWQE3PfdMdzmOTRxlCLRDdbWDe9iyyd/8QkaUtXxzXYjCjBkyyZn6AOfoMUeKjd\noIIV6vL+Rzjw8N2Wyq91gFYiPwKBgQDBW2BEMTUBcihdCzZaYD7gLQxEOs62vwEJ\nMxeFIJwnfOUnh2eIEsZn2eMjGwVETNmOLUy1skHeAeDg/wNAY6jV6gwbfSAyaX1X\nZq6aqPESY0eNYG5Y1KGqKktdZ+pCUaapfITd73it5w5YXRvFTK4HpFCYwoAUzWnt\nHBGXYGtahQKBgGt9IDOSOOvpMtGiSbVkH1W7Lz6NhWYv6uGiVNh6aNIrJ70Kcvno\nMn13J9f+MLUDsXUQcsOV533kz5sTkMDBMz7SOWQnlGCyEG8pweF7h3nU7uZwl/OL\ny/gDTCTTRwAXObaEXuWKXziig92MKexdj4LcGo8X9M74zNG8Pinoh3V/AoGBALKC\nwwCSEWaxVzR3eom7m7Dpxg5j4J50/ubYZZmBvsjyFLoG132YH9aXIY0ykA07igsq\nJU0GMqtdPplatkzG9YPwnZbvUT9Zht+fLAobeN1KDTAn3BhkzpBElem5W1w49843\n6I7hXJ/o1qSb6Vyg63agq8wsnYUXE/lVVaRU3yflAoGBAIZXNIfiOM4orXVO2eEt\nPckORaTm55Nf0x3BYTDTH/CKge+ZZQEaqpgS49+Wz8HETJKnsQ14YRm+9nSTAmLt\nD2sAjibkVYLalVEsrRhvhs7i6EE+BC0vgZDvQz+gwtL2wuUGLPklAwVpSEA40gjF\nGHLuCREFk2E7y3socnv0K+Us\n-----END PRIVATE KEY-----\n",
+  "client_email": "swingagentbot@swingagent.iam.gserviceaccount.com",
+  "client_id": "108732369772596614873",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/swingagentbot%40swingagent.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
