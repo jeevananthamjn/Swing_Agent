@@ -7,7 +7,7 @@ from datetime import datetime
 TICKERS = ["GOLDBEES.NS", "NIFTYBEES.NS", "ITBEES.NS", "GOLDPETAL.NS"]
 EMAIL_FROM = "jeevanantham1989@gmail.com"           # your Gmail
 EMAIL_TO = "jeevanantham1989@gmail.com"             # recipient email (can be same)
-APP_PASSWORD = "gkbnqakvxrqyygiw"   # Gmail App Password
+APP_PASSWORD = "gkbn qakv xrqy ygiw"    # Gmail App Password
 
 # === FUNCTION: get swing signal ===
 def get_signal(ticker):
