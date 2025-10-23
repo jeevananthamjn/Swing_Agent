@@ -4,23 +4,23 @@ from email.mime.text import MIMEText
 from datetime import datetime, timedelta
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+import os
+import json
 
 # === CONFIG ===
 TICKERS = ["GOLDBEES.NS", "NIFTYBEES.NS", "ITBEES.NS", "GOLDPETAL.NS"]
-EMAIL_FROM = "jeevanantham1989@gmail.com"
-EMAIL_TO = "jeevanantham1989@gmail.com"
-APP_PASSWORD = "gkbn qakv xrqy ygiw"
+EMAIL_FROM = os.environ.get("jeevanantham1989@gmail.com")
+EMAIL_TO = os.environ.get("jeevanantham1989@gmail.com")
+APP_PASSWORD = os.environ.get("gkbn qakv xrqy ygiw")
 STOPLOSS_PERCENT = 1.5
 TARGET_PERCENT = 3.0
 
-# Google Sheets config
 GSHEET_NAME = "SwingSignals"
-CREDENTIALS_FILE = "main/swingagent-e6b363ab0671.json"
 
-# === GOOGLE SHEETS SETUP ===
-scope = ["https://spreadsheets.google.com/feeds",
-         "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name(CREDENTIALS_FILE, scope)
+# === GOOGLE SHEETS SETUP using GitHub Secret ===
+scope = ["https://spreadsheets.google.com/feeds","https://www.googleapis.com/auth/drive"]
+creds_dict = json.loads(os.environ['GSHEET_JSON'])
+creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
 client = gspread.authorize(creds)
 sheet = client.open(GSHEET_NAME).sheet1
 
@@ -34,7 +34,6 @@ def get_signal(ticker):
     last_price = float(last_row["Close"])
     ema20 = float(last_row["EMA20"])
 
-    # BUY signal only
     if last_price > ema20:
         stoploss = last_price * (1 - STOPLOSS_PERCENT / 100)
         target = last_price * (1 + TARGET_PERCENT / 100)
@@ -69,7 +68,7 @@ def log_to_sheet(signal):
         signal["ema20"],
         signal["stoploss"],
         signal["target"],
-        "Open"  # Status (Open, Win, Loss)
+        "Open"
     ]
     sheet.append_row(row)
 
@@ -78,7 +77,7 @@ def update_status():
     records = sheet.get_all_records()
     for i, r in enumerate(records, start=2):
         if r['Status (Hit/Miss)'] in ["Win", "Loss"]:
-            continue  # Already decided
+            continue
 
         ticker = r['Ticker']
         target = r['Target']
@@ -131,7 +130,6 @@ if __name__ == "__main__":
             signals.append(s)
             log_to_sheet(s)
 
-    # Update hit/miss status automatically
     update_status()
 
     if signals:
@@ -148,7 +146,6 @@ if __name__ == "__main__":
         send_email(f"Swing Trade Signals ({datetime.now().strftime('%Y-%m-%d %H:%M')})", email_body)
         print("✅ Email sent!")
 
-    # Weekly summary: Monday 10 AM
     if datetime.now().weekday() == 0 and datetime.now().hour == 10:
         summary = weekly_summary()
         send_email("📊 Weekly Swing Trade Summary", summary)
