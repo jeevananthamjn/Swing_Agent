@@ -15,7 +15,7 @@ TARGET_PERCENT = 3.0
 
 # Google Sheets config
 GSHEET_NAME = "SwingSignals"
-CREDENTIALS_FILE = "credentials/swingagent-e6b363ab0671.json"
+CREDENTIALS_FILE = "main/swingagent-e6b363ab0671.json"
 
 # === GOOGLE SHEETS SETUP ===
 scope = ["https://spreadsheets.google.com/feeds",
